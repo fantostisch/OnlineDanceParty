@@ -1,2 +1,3 @@
 dist/js/
 tsconfig.json
+*.md
