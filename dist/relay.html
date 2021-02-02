@@ -1,0 +1,16 @@
+<!-- we have to use a page to use modules on Firefox
+     https://bugzilla.mozilla.org/show_bug.cgi?id=1394303 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <script
+            type="application/javascript"
+            src="js/deps/browser-polyfill.js"
+        ></script>
+        <script type="module" src="js/relay.js"></script>
+        <script src="js/background-popup.js"></script>
+    </body>
+</html>

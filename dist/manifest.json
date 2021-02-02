@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "Online Dance Party",
+    "version": "0.1",
+    "description": "Play Just Dance Now with friends at different locations.",
+    "icons": {
+        "48": "img/icon/icon-48.png",
+        "96": "img/icon/icon-96.png"
+    },
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "*://*.justdancenow.com/*",
+        "storage",
+        // declarativeContent is necessary for Chrome
+        "declarativeContent"
+    ],
+    "background": {
+        "page": "./relay.html"
+    },
+    "page_action": {
+        "browser_style": true,
+        "default_icon": {
+            "48": "img/icon/icon-48.png",
+            "96": "img/icon/icon-96.png"
+        },
+        "default_title": "Online Dance Party",
+        "default_popup": "popup.html",
+        "show_matches": ["*://*.justdancenow.com/*"]
+    }
+}
