@@ -1,3 +1,4 @@
 dist/js/
 tsconfig.json
 *.md
+dist/css/main.css

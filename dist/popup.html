@@ -2,65 +2,90 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/main.css" />
     </head>
     <body>
+        <main>
+            <p>
+                One person hosts and controls the game. This is the host. Come
+                up with a unique code for your dance party, press apply, and
+                then share this code with others who join as follower. Leave the
+                server field empty to use the default server. Start a dance
+                using the Just Dance Now app instead of the browser for better
+                synchronization between users. Choosing an already chosen code
+                will result in infinite loading, so come up with something
+                unique!
+                <!-- todo: instead of infinite loading, report that code is already in use -->
+            </p>
+
+            <p>
+                Please report any issues on the
+                <a
+                    href="https://github.com/fantostisch/OnlineDanceParty/issues"
+                    target="_blank"
+                    >issue tracker</a
+                >.
+            </p>
+            <form id="form">
+                <p>
+                    <label for="server">Server (optional)</label>
+                    <input
+                        type="text"
+                        id="server"
+                        name="server"
+                        placeholder="dance.nickaquina.nl"
+                    />
+                </p>
+
+                <p>
+                    <input type="radio" id="host" name="setting" value="Host" />
+                    <label for="host">Host</label>
+                    <br />
+                    <input
+                        type="text"
+                        id="host-code"
+                        name="host-code"
+                        placeholder="myAwesomeDanceParty"
+                        required
+                    />
+                </p>
+
+                <p>
+                    <input
+                        type="radio"
+                        id="follower"
+                        name="setting"
+                        value="Follower"
+                    />
+                    <label for="follower">Follower</label>
+                    <br />
+                    <input
+                        type="text"
+                        id="follow-code"
+                        name="follow-code"
+                        placeholder="code of host"
+                        required
+                    />
+                </p>
+
+                <p>
+                    <input
+                        type="radio"
+                        id="Disabled"
+                        name="setting"
+                        value="Disabled"
+                    />
+                    <label for="Disabled">Disable extension</label>
+                </p>
+
+                <input type="submit" value="Apply" id="apply" />
+            </form>
+        </main>
         <script
             type="application/javascript"
             src="js/deps/browser-polyfill.js"
         ></script>
         <script type="module" src="js/popup.js"></script>
-        <p>
-            One person hosts and controls the game. This is the host. Come up
-            with a unique code for your dance party, press apply, and then share
-            this code with others who join as follower. Leave the server field
-            empty to use the default server. Start a dance using the Just Dance
-            Now app instead of the browser for better synchronization between
-            users. Choosing an already chosen code will result in infinite
-            loading, so come up with something unique!
-            <!-- todo: instead of infinite loading, report that code is already in use -->
-        </p>
-
-        <p>
-            Please report any issues on the
-            <a
-                href="https://github.com/fantostisch/OnlineDanceParty/issues"
-                target="_blank"
-                >issue tracker</a
-            >.
-        </p>
-        <form id="form">
-            <label for="server">Server:</label>
-            <input
-                type="text"
-                id="server"
-                name="server"
-                placeholder="dance.nickaquina.nl"
-            /><br />
-
-            <input type="radio" id="host" name="setting" value="Host" />
-            <label for="host">Host</label>
-            <input
-                type="text"
-                id="host-code"
-                name="host-code"
-                placeholder="myAwesomeDanceParty"
-                required
-            /><br />
-
-            <input type="radio" id="follower" name="setting" value="Follower" />
-            <label for="follower">Follower</label>
-            <input
-                type="text"
-                id="follow-code"
-                name="follow-code"
-                placeholder="code of host"
-                required
-            /><br />
-
-            <input type="radio" id="Disabled" name="setting" value="Disabled" />
-            <label for="Disabled">Disabled</label><br /><br />
-
-            <input type="submit" value="Apply" id="apply" />
-        </form>
     </body>
 </html>
