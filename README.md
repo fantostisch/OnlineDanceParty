@@ -4,13 +4,6 @@ Play Just Dance Now with friends at different locations. This is a browser exten
 possible to see the dance screen at multiple locations. This is built as an alternative to screen
 sharing, because screen sharing suffers from lag and a low frame rate.
 
-## Not working completely
-Well, it works if you do the following:
-* Let host create a code. Do not join using the app.
-* Let followers join using the code. Do not join using the app.
-* Now let everyone join using the app. Do not refresh the page.
-* Start the game using the app instead of the browser for better synchronization between users.
-
 ## Usage
 
 1. Install and open Firefox or Chrome.
