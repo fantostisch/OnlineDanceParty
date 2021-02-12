@@ -4,6 +4,7 @@ const storage = browser.storage.local
 
 const serverKey = "server"
 
+//todo: both follower id and host id should be saved and restored
 export async function getServer(): Promise<string | undefined> {
     return (await storage.get(serverKey))[serverKey]
 }
