@@ -2,7 +2,7 @@ body {
     width: 650px;
 }
 
-input[type="text"]:disabled {
+input:disabled {
     background: #efefef;
 }
 
