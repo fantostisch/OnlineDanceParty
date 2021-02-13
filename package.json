@@ -7,7 +7,7 @@
         "format": "npx prettier@2.2.1 . --write",
         "check": "npm run-script build && npm run-script lint && bash format-check.sh && echo 'No errors'",
         "clean": "rm -rf dist/js",
-        "release": "npm run-script build && mkdir -p ../OnlineDancePartyReleases/ && zip -r ../OnlineDancePartyReleases/release.zip dist/*"
+        "release": "npm run-script clean && npm run-script build && mkdir -p ../OnlineDancePartyReleases/ && cd dist && zip -r \"../../OnlineDancePartyReleases/odp-$(git describe --dirty --always --tags)\".zip ."
     },
     "devDependencies": {
         "@types/firefox-webext-browser": "^82.0.0",
