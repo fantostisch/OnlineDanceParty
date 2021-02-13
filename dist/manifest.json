@@ -7,12 +7,12 @@
         "48": "img/icon/icon-48.png",
         "96": "img/icon/icon-96.png"
     },
+    "// declarativeContent is necessary for Chrome": "",
     "permissions": [
         "webRequest",
         "webRequestBlocking",
         "*://*.justdancenow.com/*",
         "storage",
-        // declarativeContent is necessary for Chrome
         "declarativeContent"
     ],
     "background": {
