@@ -11,10 +11,11 @@ sharing, because screen sharing suffers from lag and a low frame rate.
 1. Install and open Firefox. (Chrome extension will be available soon.)
 2. Install this browser extension.
 3. Open [justdancenow.com](https://justdancenow.com).
-4. One player selects host and shares the follow code.
-5. Other players select follower and fill in the follow code.
-6. Join the room using the Just Dance Now app.
-7. Have fun!
+4. Click on the disco ball.
+5. One player selects host and shares the follow code.
+6. Other players select follower and fill in the follow code.
+7. Join the room using the Just Dance Now app.
+8. Have fun!
 
 The room can be controlled from the host browser and from the Just Dance Now app. When controlling
 the room using the browser of the host, at least one user should be in the room using the Just Dance
