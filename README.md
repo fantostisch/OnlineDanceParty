@@ -4,12 +4,13 @@ Play Just Dance Now with friends at different locations. This is a browser exten
 possible to see the dance screen at multiple locations. This is built as an alternative to screen
 sharing, because screen sharing suffers from lag and a low frame rate.
 
+[![Get the add-on for Firefox](img/promotion/AMO-button.png)](https://addons.mozilla.org/en-US/firefox/addon/online-dance-party/)
+
 ## Usage
 
-1. Install and open Firefox or Chrome.
-2. Install this browser extension. (This extension will be published on addons.mozilla.org and
-   the Chrome Web Store when most bugs are fixed)
-3. Open [justdancenow.com](https://justdancenow.com)
+1. Install and open Firefox. (Chrome extension will be available soon.)
+2. Install this browser extension.
+3. Open [justdancenow.com](https://justdancenow.com).
 4. One player selects host and shares the follow code.
 5. Other players select follower and fill in the follow code.
 6. Join the room using the Just Dance Now app.
