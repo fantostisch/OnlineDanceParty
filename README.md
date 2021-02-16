@@ -5,11 +5,15 @@ possible to see the dance screen at multiple locations. This is built as an alte
 sharing, because screen sharing suffers from lag and a low frame rate.
 
 [![Get the add-on for Firefox](img/promotion/AMO-button.png)](https://addons.mozilla.org/en-US/firefox/addon/online-dance-party/)
+[![Get the add-on for Chrome](img/promotion/Chrome-button.png)](https://chrome.google.com/webstore/detail/online-dance-party/pjjphlghccmaedekgpalljfcckpjpekl)
 
 ## Usage
 
-1. Install and open Firefox. (Chrome extension will be available soon.)
+1. Install and open Firefox or Chrome.
 2. Install this browser extension.
+   [Get the add-on for Firefox](https://addons.mozilla.org/en-US/firefox/addon/online-dance-party/)
+   or
+   [get the add-on for Chrome](https://chrome.google.com/webstore/detail/online-dance-party/pjjphlghccmaedekgpalljfcckpjpekl).
 3. Open [justdancenow.com](https://justdancenow.com).
 4. Click on the disco ball.
 5. One player selects host and shares the follow code.
