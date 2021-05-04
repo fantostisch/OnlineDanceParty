@@ -1,5 +1,8 @@
 import { Follower, Host, ODPClient } from "./model/ODPClient.js"
 import * as storage from "./storage.js"
+import * as constants from "./constants.js"
+import * as server from "./server.js"
+import { supportedProtocol } from "./constants.js"
 
 async function reload(): Promise<void> {
     await browser.tabs.reload()
@@ -16,6 +19,13 @@ const radio = form.elements.namedItem("setting") as RadioNodeList
 const radioDisabled = "Disabled"
 const radioHost = "Host"
 const radioFollower = "Follower"
+const applyButton = form.elements.namedItem("apply") as HTMLButtonElement
+
+async function reportAndReload(message: string) {
+    console.log(message)
+    alert(message)
+    await reload()
+}
 
 function registerHandlers() {
     const radioOnChange = () => {
@@ -36,27 +46,55 @@ function registerHandlers() {
     })
     form.onsubmit = async function (this: GlobalEventHandlers, e: Event) {
         e.preventDefault()
-        const serverValue = serverField.value
-        if (serverValue == null) {
-            await storage.removeServer()
-        } else {
-            //todo: check if server is valid
-            await storage.setServer(serverValue)
-        }
+        applyButton.value = "Loading..."
+        applyButton.disabled = true
 
-        const radioValue = radio.value
-        if (radioValue === "" || radioValue === radioDisabled) {
-            await storage.removeODPClient()
-        } else if (radioValue == radioHost) {
-            await storage.setODPClient(
-                new ODPClient(new Host(hostCodeField.value))
-            )
-        } else if (radioValue == radioFollower) {
-            await storage.setODPClient(
-                new ODPClient(new Follower(followCodeField.value))
-            )
-        }
-        await reload()
+        const serverValue = serverField.value
+        const serverURL = "https://" + (serverValue || constants.defaultServer)
+        serverField.setCustomValidity("test")
+        await server.getAbout(serverURL).then(
+            async (sv) => {
+                if (!sv.includes(constants.supportedProtocol)) {
+                    if (sv.find((v) => v > constants.supportedProtocol)) {
+                        await reportAndReload(
+                            "To use this server a new version of this extension is required."
+                        )
+                        return
+                    } else if (
+                        sv.find((v) => v < constants.supportedProtocol)
+                    ) {
+                        await reportAndReload(
+                            "Please ask the owner of this server to upgrade his server to the latest version."
+                        )
+                        return
+                    }
+                }
+                if (serverValue == null) {
+                    await storage.removeServer()
+                } else {
+                    await storage.setServer(serverValue)
+                }
+
+                const radioValue = radio.value
+                if (radioValue === "" || radioValue === radioDisabled) {
+                    await storage.removeODPClient()
+                } else if (radioValue == radioHost) {
+                    await storage.setODPClient(
+                        new ODPClient(new Host(hostCodeField.value))
+                    )
+                } else if (radioValue == radioFollower) {
+                    await storage.setODPClient(
+                        new ODPClient(new Follower(followCodeField.value))
+                    )
+                }
+            },
+            async (err) => {
+                await reportAndReload(
+                    "Something went wrong while connecting to the server. Please try again. Error: " +
+                        err
+                )
+            }
+        )
     }
 }
 

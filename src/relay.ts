@@ -2,6 +2,7 @@ import _OnBeforeRequestDetails = browser.webRequest._OnBeforeRequestDetails
 import BlockingResponse = browser.webRequest.BlockingResponse
 // we need to add .js when using imports: https://github.com/microsoft/TypeScript/issues/16577
 import * as storage from "./storage.js"
+import * as constants from "./constants.js"
 
 // Redirecting websockets does not work,
 // so we modify the response that tells the client the location of the websocket.
@@ -16,8 +17,6 @@ function requestHook(
     }
 }
 
-const defaultServer = "dance.nickaquina.nl"
-
 async function main(): Promise<void> {
     const patterns = ["https://justdancenow.com/query"]
 
@@ -26,7 +25,7 @@ async function main(): Promise<void> {
     if (odpClient == null) {
         return
     }
-    const server = (await storage.getServer()) || defaultServer
+    const server = (await storage.getServer()) || constants.defaultServer
     const redirectUrl =
         `https://${server}/v1/query/` +
         encodeURIComponent(JSON.stringify(odpClient))
