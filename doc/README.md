@@ -5,6 +5,7 @@ Known websocket domains:
 ```
 ire-prod-drs.justdancenow.com Ireland
 sap-prod-drs.justdancenow.com Sao Paulo
+vir-prod-drs.justdancenow.com Virginia
 ```
 
 # Documentation resources
