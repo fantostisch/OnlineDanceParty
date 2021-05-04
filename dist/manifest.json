@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Online Dance Party",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "description": "Play Just Dance Now with friends at different locations.",
     "homepage_url": "https://github.com/fantostisch/OnlineDanceParty",
     "icons": {
