@@ -1,5 +1,10 @@
 # Changelog for Online Dance Party Browser Extension
 
+## [1.2.1]
+
+This version is actually 1.1.0 and was only uploaded to the Chrome Web Store because 1.2.0 does not
+work on Chrome.
+
 ## [1.2.0]
 
 Requires at least server v1.2.0.
