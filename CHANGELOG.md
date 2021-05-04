@@ -1,9 +1,11 @@
 # Changelog for Online Dance Party Browser Extension
 
 ## [1.2.0]
+
 Requires at least server v1.2.0.
 
 * Fix `Dance Room does not exist` error for users in same country.
+  See [#1](https://github.com/fantostisch/OnlineDanceParty/issues/1).
 * Different color for disabled input.
 * 128x128 icon.
 
