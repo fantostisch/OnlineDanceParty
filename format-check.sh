@@ -3,7 +3,7 @@
 # https://github.com/prettier/prettier/issues/6069
 # todo: prettier is run 2 times, can we run it once?
 failed=0
-prettier_command="npx -q prettier@2.2.1"
+prettier_command="npx -q prettier@2.7.1"
 for file in $($prettier_command -l .) ; do
   echo "$file is incorrectly formatted."
   $prettier_command "$file" | colordiff "$file" -

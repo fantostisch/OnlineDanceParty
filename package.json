@@ -10,13 +10,13 @@
         "release": "npm run-script clean && npm run-script build && mkdir -p ../OnlineDancePartyReleases/ && cd dist && zip -r \"../../OnlineDancePartyReleases/odp-$(git describe --dirty --always --tags)\".zip ."
     },
     "devDependencies": {
-        "@types/firefox-webext-browser": "^82.0.0",
-        "@typescript-eslint/eslint-plugin": "^4.9.0",
-        "@typescript-eslint/parser": "^4.9.0",
-        "eslint": "^7.15.0",
-        "eslint-config-prettier": "^7.0.0",
-        "prettier": "2.2.1",
-        "typescript": "^4.1.2",
-        "webextension-polyfill": "^0.8.0"
+        "@types/firefox-webext-browser": "94.0.1",
+        "@typescript-eslint/eslint-plugin": "5.28.0",
+        "@typescript-eslint/parser": "5.28.0",
+        "eslint": "8.18.0",
+        "eslint-config-prettier": "8.5.0",
+        "prettier": "2.7.1",
+        "typescript": "4.7.4",
+        "webextension-polyfill": "0.9.0"
     }
 }
