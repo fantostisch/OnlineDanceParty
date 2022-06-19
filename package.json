@@ -5,9 +5,9 @@
         "build": "tsc && mkdir -p dist/js/deps && cp node_modules/webextension-polyfill/dist/browser-polyfill.min.js dist/js/deps/browser-polyfill.js",
         "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx,.json",
         "format": "npx prettier@2.2.1 . --write",
-        "check": "npm run-script build && npm run-script lint && bash format-check.sh && echo 'No errors'",
+        "check": "npm run build && npm run lint && bash format-check.sh && echo 'No errors'",
         "clean": "rm -rf dist/js",
-        "release": "npm run-script clean && npm run-script build && mkdir -p ../OnlineDancePartyReleases/ && cd dist && zip -r \"../../OnlineDancePartyReleases/odp-$(git describe --dirty --always --tags)\".zip ."
+        "release": "npm run clean && npm run build && mkdir -p ../OnlineDancePartyReleases/ && cd dist && zip -r \"../../OnlineDancePartyReleases/odp-$(git describe --dirty --always --tags)\".zip ."
     },
     "devDependencies": {
         "@types/firefox-webext-browser": "94.0.1",
