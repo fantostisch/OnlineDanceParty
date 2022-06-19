@@ -3,6 +3,7 @@
         "start": "tsc && cd dist && web-ext run --source-dir ./ --url https://justdancenow.com",
         "startC": "npm start -- -t chromium",
         "build": "tsc && mkdir -p dist/js/deps && cp node_modules/webextension-polyfill/dist/browser-polyfill.min.js dist/js/deps/browser-polyfill.js",
+        "watch": "tsc --watch",
         "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx,.json",
         "format": "npx prettier@2.2.1 . --write",
         "check": "npm run build && npm run lint && bash format-check.sh && echo 'No errors'",

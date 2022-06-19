@@ -57,7 +57,7 @@ npm run build
 For changes in typescript to become active the typescript code has to be compiled to javascript:
 
 ```
-tsc --watch
+npm run watch
 ```
 
 ### Start browser with extension
