@@ -51,7 +51,7 @@ Information about hosting your own server can be found in
 
 ```sh
 npm install
-npm run-script build
+npm run build
 ```
 
 For changes in typescript to become active the typescript code has to be compiled to javascript:
@@ -71,7 +71,7 @@ npm start
 Chrome:
 
 ```sh
-npm run-script startC
+npm run startC
 ```
 
 ### Run type checker and linter
@@ -79,7 +79,7 @@ npm run-script startC
 Please run
 
 ```sh
-npm run-script check
+npm run check
 ```
 
 and check for errors before committing.

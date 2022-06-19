@@ -18,4 +18,4 @@ jobs:
                   node-version: ${{ matrix.node-version }}
             - run: npm ci
             - run: sudo apt-get install --yes colordiff
-            - run: npm run-script check
+            - run: npm run check
