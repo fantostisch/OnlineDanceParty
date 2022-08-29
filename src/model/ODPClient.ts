@@ -16,13 +16,9 @@ export class ODPClient {
 export type HostID = string
 
 export class Host {
-    constructor(public id: HostID) {
-        this.id = id
-    }
+    constructor(public id: HostID) {}
 }
 
 export class Follower {
-    constructor(public hostToFollow: HostID) {
-        this.hostToFollow = hostToFollow
-    }
+    constructor(public hostToFollow: HostID) {}
 }
